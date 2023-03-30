@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "33feZv/3IWUrsiOYoDr7ma2Ocot5pUSIUvSHmZkfK6M=",
+  "Source": "ElasticKibanaLoggingVerify",
+  "BasePath": "_content/ElasticKibanaLoggingVerify",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
