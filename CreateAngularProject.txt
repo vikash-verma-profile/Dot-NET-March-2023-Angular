@@ -1,0 +1,10 @@
+Step-1
+npm install -g @angular/cli
+Step-2
+cd to the location where you want to keep your project
+Step-3
+ng new <project-name>
+step-4
+cd to project location
+step-5
+ng serve
