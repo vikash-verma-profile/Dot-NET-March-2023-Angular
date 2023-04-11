@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Numbers } from './app.model';
+import { Customer, Numbers } from './app.model';
 
 @Component({
   selector: 'app-root',
@@ -21,9 +21,15 @@ export class AppComponent {
   imageUrl="./assets/Image1.jpg";
 
   NumberModel=new Numbers();
-
+  CustomerModel=new Customer();
+  CustomerModels=new Array<Customer>();
   SayHi(){
     //alert("HI");
    console.log(this.NumberModel);
+  }
+  addCustomer(){
+    console.log(this.CustomerModel);
+    this.CustomerModels.push(this.CustomerModel);
+    console.log(this.CustomerModels);
   }
 }
