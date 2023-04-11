@@ -5,7 +5,11 @@
 <br/>
 {{name}} -->
 
-Name
-<input type="text" />
+<img [src]="imageUrl"  height="100" width="100"/>
+
+Value 1
+<input [(ngModel)]="NumberModel.Number1" type="text" />
+Value 2
+<input [(ngModel)]="NumberModel.Number2" type="text" />
 <br/><br/>
-<input type="button" value="Send" (click)="SayHi()" />
+<input type="button" value="Send" (click)="SayHi()"  />
