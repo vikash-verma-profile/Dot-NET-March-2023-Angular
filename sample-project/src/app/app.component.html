@@ -18,16 +18,16 @@ Value 2
     <br />
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Customer Code</label>
-        <input type="text" [(ngModel)]="CustomerModel.CustomerCode" class="form-control" id="exampleInputEmail1"
+        <input type="text" [(ngModel)]="CustomerModel.customerCode" class="form-control" id="exampleInputEmail1"
             aria-describedby="emailHelp">
     </div>
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Customer Name</label>
-        <input type="text" [(ngModel)]="CustomerModel.CustomerName" class="form-control" id="exampleInputPassword1">
+        <input type="text" [(ngModel)]="CustomerModel.customerName" class="form-control" id="exampleInputPassword1">
     </div>
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Customer Amount</label>
-        <input type="text" [(ngModel)]="CustomerModel.CustomerAmount" class="form-control" id="exampleInputPassword1">
+        <input type="text" [(ngModel)]="CustomerModel.customerAmount" class="form-control" id="exampleInputPassword1">
     </div>
     <button type="submit" class="btn btn-primary" (click)="addCustomer()">Add Customer</button>
 
@@ -43,9 +43,9 @@ Value 2
             </tr>
         </thead>
         <tr *ngFor="let cust of CustomerModels">
-            <td>{{cust.CustomerCode}}</td>
-            <td>{{cust.CustomerName}}</td>
-            <td>{{cust.CustomerAmount}}</td>
+            <td>{{cust.customerCode}}</td>
+            <td>{{cust.customerName}}</td>
+            <td>{{cust.customerAmount}}</td>
             <td><input type="button" class="btn btn-primary" value="Edit"/>
                 <input type="button" class="btn btn-primary" value="Delete"/>
             </td>

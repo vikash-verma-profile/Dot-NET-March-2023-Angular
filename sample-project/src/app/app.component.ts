@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Customer, Numbers } from './app.model';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -11,8 +12,19 @@ export class AppComponent {
   /**
    *
    */
-  constructor() {
+  constructor(private http:HttpClient) {
    console.log("Hello i am constructor");
+
+  }
+
+  ngOnInit(){
+    this.http.get('https://localhost:7293/api/Customer').subscribe(res=>this.success(res),res=>console.log(res));
+  }
+
+  success(res:any){
+   this.CustomerModels=res;
+  }
+  GetCustomerData(){
 
   }
   title = 'sample-project';
@@ -28,7 +40,7 @@ export class AppComponent {
    console.log(this.NumberModel);
   }
   addCustomer(){
-    this.CustomerModels.push(this.CustomerModel);
+   // this.CustomerModels.push(this.CustomerModel);
     this.CustomerModel=new Customer();
   }
 }
