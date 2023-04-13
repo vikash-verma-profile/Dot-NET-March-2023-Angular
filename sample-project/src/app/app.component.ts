@@ -28,8 +28,7 @@ export class AppComponent {
    console.log(this.NumberModel);
   }
   addCustomer(){
-    console.log(this.CustomerModel);
     this.CustomerModels.push(this.CustomerModel);
-    console.log(this.CustomerModels);
+    this.CustomerModel=new Customer();
   }
 }

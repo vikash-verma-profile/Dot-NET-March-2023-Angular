@@ -5,17 +5,50 @@
 <br/>
 {{name}} -->
 
-<img [src]="imageUrl"  height="100" width="100"/>
+<!-- <img [src]="imageUrl"  height="100" width="100"/> -->
 
 <!-- Value 1
 <input [(ngModel)]="NumberModel.Number1" type="text" />
 Value 2
 <input [(ngModel)]="NumberModel.Number2" type="text" /> -->
-Customer Code
-<input [(ngModel)]="CustomerModel.CustomerCode" type="text" />
-Customer Name
-<input [(ngModel)]="CustomerModel.CustomerName" type="text" />
-Customer Amount
-<input [(ngModel)]="CustomerModel.CustomerAmount" type="text" />
-<br/><br/>
-<input type="button" value="Add Customer" (click)="addCustomer()"  />
+
+<div class="container">
+    <br />
+    <h2>Add Customer</h2>
+    <br />
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Customer Code</label>
+        <input type="text" [(ngModel)]="CustomerModel.CustomerCode" class="form-control" id="exampleInputEmail1"
+            aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Customer Name</label>
+        <input type="text" [(ngModel)]="CustomerModel.CustomerName" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Customer Amount</label>
+        <input type="text" [(ngModel)]="CustomerModel.CustomerAmount" class="form-control" id="exampleInputPassword1">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="addCustomer()">Add Customer</button>
+
+    <br />
+    <br />
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Customer Code</th>
+                <th scope="col">Customer Name</th>
+                <th scope="col">Customer Amount</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tr *ngFor="let cust of CustomerModels">
+            <td>{{cust.CustomerCode}}</td>
+            <td>{{cust.CustomerName}}</td>
+            <td>{{cust.CustomerAmount}}</td>
+            <td><input type="button" class="btn btn-primary" value="Edit"/>
+                <input type="button" class="btn btn-primary" value="Delete"/>
+            </td>
+        </tr>
+    </table>
+</div>
