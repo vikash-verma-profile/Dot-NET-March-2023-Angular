@@ -172,3 +172,4 @@ C:\Users\LEVEL UP SOLUTIONS 1\Desktop\DOT-NET_ANGULAR\CustomerApp\obj\Debug\net6
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\DOT-NET_ANGULAR\CustomerApp\obj\Debug\net6.0\CustomerApp.pdb
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\DOT-NET_ANGULAR\CustomerApp\obj\Debug\net6.0\CustomerApp.genruntimeconfig.cache
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\DOT-NET_ANGULAR\CustomerApp\obj\Debug\net6.0\ref\CustomerApp.dll
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\DOT-NET_ANGULAR\CustomerApp\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

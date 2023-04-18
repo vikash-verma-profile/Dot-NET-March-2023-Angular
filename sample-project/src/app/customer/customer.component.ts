@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import { Customer, Numbers } from './app.model';
+import { Customer, Numbers } from './customer.model';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './customer.component.html',
 })
-export class AppComponent {
+export class CustomerComponent {
 
   /**
    *
