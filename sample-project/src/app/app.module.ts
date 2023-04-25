@@ -9,6 +9,8 @@ import { CustomerComponent } from './customer/customer.component';
 import { MasterComponent } from './home/master.component';
 import {RouterModule} from '@angular/router';
 import { MainRoutes } from './routes/routing.main';
+import { AuthService } from './services/auth.service';
+import { CustomerService } from './services/customer.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,7 @@ import { MainRoutes } from './routes/routing.main';
     HttpClientModule,
     RouterModule.forRoot(MainRoutes)
   ],
-  providers: [],
+  providers: [CustomerService,AuthService],
   bootstrap: [MasterComponent]
 })
 export class AppModule { }

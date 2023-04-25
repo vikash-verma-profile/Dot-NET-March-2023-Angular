@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Customer, Numbers } from './customer.model';
 import { HttpClient } from '@angular/common/http';
+import { CustomerService } from '../services/customer.service';
 
 @Component({
   templateUrl: './customer.component.html',
@@ -10,13 +11,13 @@ export class CustomerComponent {
   /**
    *
    */
-  constructor(private http:HttpClient) {
+  constructor(private http:HttpClient,private custService:CustomerService) {
    console.log("Hello i am constructor");
 
   }
 
   ngOnInit(){
-    this.http.get('https://localhost:7293/api/Customer').subscribe(res=>this.success(res),res=>console.log(res));
+    this.custService.getCustomers().subscribe(res=>this.success(res),res=>console.log(res));
   }
 
   success(res:any){

@@ -1,1 +1,11 @@
-<p>login works!</p>
+<div style="margin-top: 20px;">
+    <div class="mb-3">
+      <label  class="form-label">Email address</label>
+      <input type="email"  [(ngModel)]="loginUserModel.userName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label  class="form-label">Password</label>
+      <input type="password"  [(ngModel)]="loginUserModel.password"  class="form-control" id="exampleInputPassword1">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="loginUser()">Login</button>
+</div>
