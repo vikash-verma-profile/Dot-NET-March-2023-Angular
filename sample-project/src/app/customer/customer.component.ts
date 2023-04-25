@@ -3,7 +3,6 @@ import { Customer, Numbers } from './customer.model';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-root',
   templateUrl: './customer.component.html',
 })
 export class CustomerComponent {
