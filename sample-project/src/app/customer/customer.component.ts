@@ -40,6 +40,13 @@ export class CustomerComponent {
   }
   addCustomer(){
    // this.CustomerModels.push(this.CustomerModel);
+
+   var customerdata={
+    "customerName":this.CustomerModel.customerName,
+    "customerCode":this.CustomerModel.customerCode,
+    "customerAmount":this.CustomerModel.customerAmount
+   }
+   this.http.post("https://localhost:7293/api/Customer",customerdata,)
     this.CustomerModel=new Customer();
   }
 
