@@ -16,20 +16,25 @@ Value 2
     <br />
     <h2>Add Customer</h2>
     <br />
+    <form [formGroup]="CustomerModel.formCustomerGroup">
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Customer Code</label>
-        <input type="text" [(ngModel)]="CustomerModel.customerCode" class="form-control" id="exampleInputEmail1"
+        <input type="text" formControlName="CustomerCodeControl" [(ngModel)]="CustomerModel.customerCode" class="form-control" id="exampleInputEmail1"
             aria-describedby="emailHelp">
+            <label *ngIf="CustomerModel.formCustomerGroup.dirty" [hidden]="!(hasError('required','CustomerCodeControl'))" style="color: red;">Customer Code is required</label>
+            <label *ngIf="CustomerModel.formCustomerGroup.dirty" [hidden]="!(hasError('pattern','CustomerCodeControl'))" style="color: red;">Customer Code is not proper</label>
     </div>
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Customer Name</label>
-        <input type="text" [(ngModel)]="CustomerModel.customerName" class="form-control" id="exampleInputPassword1">
+        <input type="text" formControlName="CustomerNameControl" [(ngModel)]="CustomerModel.customerName" class="form-control" id="exampleInputPassword1">
+        <label *ngIf="CustomerModel.formCustomerGroup.dirty" [hidden]="!CustomerModel.formCustomerGroup.controls['CustomerNameControl'].hasError('required')" style="color: red;">Customer Name is required</label>
     </div>
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Customer Amount</label>
         <input type="text" [(ngModel)]="CustomerModel.customerAmount" class="form-control" id="exampleInputPassword1">
     </div>
-    <button type="submit" class="btn btn-primary" (click)="addCustomer()">Add Customer</button>
+    <button [disabled]="!(CustomerModel.formCustomerGroup.valid)" type="submit" class="btn btn-primary" (click)="addCustomer()">Add Customer</button>
+    </form>
 
     <br />
     <br />
