@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Customer, Numbers } from './customer.model';
 import { HttpClient } from '@angular/common/http';
 import { CustomerService } from '../services/customer.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   templateUrl: './customer.component.html',
@@ -11,7 +12,7 @@ export class CustomerComponent {
   /**
    *
    */
-  constructor(private http:HttpClient,private custService:CustomerService) {
+  constructor(private http:HttpClient,private custService:CustomerService,private auth:AuthService) {
    console.log("Hello i am constructor");
 
   }
@@ -44,9 +45,9 @@ export class CustomerComponent {
    var customerdata={
     "customerName":this.CustomerModel.customerName,
     "customerCode":this.CustomerModel.customerCode,
-    "customerAmount":this.CustomerModel.customerAmount
+    "customerAmount":Number(this.CustomerModel.customerAmount)
    }
-   this.http.post("https://localhost:7293/api/Customer",customerdata,)
+   this.http.post("https://localhost:7293/api/Customer",customerdata,{headers:{"Authorization":'Bearer '+this.auth.getToken()}}).subscribe(res=>console.log(res),res=>console.log(res));
     this.CustomerModel=new Customer();
   }
 

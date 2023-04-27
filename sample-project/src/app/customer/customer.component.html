@@ -31,7 +31,7 @@ Value 2
     </div>
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Customer Amount</label>
-        <input type="text" [(ngModel)]="CustomerModel.customerAmount" class="form-control" id="exampleInputPassword1">
+        <input type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="CustomerModel.customerAmount" class="form-control" id="exampleInputPassword1">
     </div>
     <button [disabled]="!(CustomerModel.formCustomerGroup.valid)" type="submit" class="btn btn-primary" (click)="addCustomer()">Add Customer</button>
     </form>
