@@ -9,10 +9,6 @@ export class CustomerService {
   constructor(private http:HttpClient,private auth:AuthService) { }
 
   getCustomers(){
-    var varHeaders=new HttpHeaders();
-    varHeaders.set('Authorization','Bearer '+this.auth.getToken());
-    varHeaders.set('Content-Type','application/json');
-    console.log(varHeaders);
-    return this.http.get('https://localhost:7293/api/Customer',{headers:varHeaders});
+    return this.http.get('https://localhost:7293/api/Customer',{headers:{"Authorization":'Bearer '+this.auth.getToken()}});
   }
 }
