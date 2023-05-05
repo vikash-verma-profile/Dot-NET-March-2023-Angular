@@ -1,0 +1,10 @@
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col" *ngFor="let col of gridColumns">{{col.colName}}</th>
+        </tr>
+    </thead>
+    <tr *ngFor="let colObj of gridData">
+        <td *ngFor="let col of gridColumns">{{colObj[col.colName]}}</td>
+    </tr>
+</table>

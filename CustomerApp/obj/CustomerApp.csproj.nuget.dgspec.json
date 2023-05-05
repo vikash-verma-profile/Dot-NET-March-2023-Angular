@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LEVEL UP SOLUTIONS 1\\Desktop\\DOT-NET_ANGULAR\\CustomerApp\\CustomerApp.csproj": {}
+    "E:\\DOT-NET_ANGULAR\\CustomerApp\\CustomerApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LEVEL UP SOLUTIONS 1\\Desktop\\DOT-NET_ANGULAR\\CustomerApp\\CustomerApp.csproj": {
+    "E:\\DOT-NET_ANGULAR\\CustomerApp\\CustomerApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LEVEL UP SOLUTIONS 1\\Desktop\\DOT-NET_ANGULAR\\CustomerApp\\CustomerApp.csproj",
+        "projectUniqueName": "E:\\DOT-NET_ANGULAR\\CustomerApp\\CustomerApp.csproj",
         "projectName": "CustomerApp",
-        "projectPath": "C:\\Users\\LEVEL UP SOLUTIONS 1\\Desktop\\DOT-NET_ANGULAR\\CustomerApp\\CustomerApp.csproj",
+        "projectPath": "E:\\DOT-NET_ANGULAR\\CustomerApp\\CustomerApp.csproj",
         "packagesPath": "C:\\Users\\LEVEL UP SOLUTIONS 1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LEVEL UP SOLUTIONS 1\\Desktop\\DOT-NET_ANGULAR\\CustomerApp\\obj\\",
+        "outputPath": "E:\\DOT-NET_ANGULAR\\CustomerApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -5,16 +5,16 @@ import {HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
-import { CustomerComponent } from './customer/customer.component';
 import { MasterComponent } from './home/master.component';
 import {RouterModule} from '@angular/router';
 import { MainRoutes } from './routes/routing.main';
 import { AuthService } from './services/auth.service';
 import { CustomerService } from './services/customer.service';
+import { AuthGaurdService } from './services/auth-gaurd.service';
+import { GridComponent } from './utility/grid/grid.component';
 
 @NgModule({
   declarations: [
-    CustomerComponent,
     LoginComponent,
     RegisterComponent,
     HomeComponent,
@@ -27,7 +27,7 @@ import { CustomerService } from './services/customer.service';
     HttpClientModule,
     RouterModule.forRoot(MainRoutes)
   ],
-  providers: [CustomerService,AuthService],
+  providers: [CustomerService,AuthService,AuthGaurdService],
   bootstrap: [MasterComponent]
 })
 export class AppModule { }

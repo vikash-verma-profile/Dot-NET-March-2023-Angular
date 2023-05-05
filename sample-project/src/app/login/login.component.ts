@@ -15,7 +15,7 @@ export class LoginComponent {
     this.auth.loginUser(this.loginUserModel).subscribe((res:any)=>{
       console.log(res);
       localStorage.setItem('token',res.token);
-      this._router.navigate(['/customer']);
+      this._router.navigate(['/customer/add']);
     },
     res=>console.log(res));
   }
